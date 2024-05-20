@@ -10,9 +10,11 @@ const Card: React.FC<ICardProps> = ({rank, suit}) => {
     <div className="playingCards faceImages">
       <span className={`card rank-${rank} ${suit}`}>
         <span className="rank">{rank.toUpperCase()}</span>
-        <span className="suit">{
-          suit === 'diams' ? '♦' : suit === 'hearts' ? '♥' : suit === 'spades' ? '♠' : suit === 'clubs' ? '♣' : 'Invalid suit'
-        }</span>
+        <span className="suit">
+          {
+            suit === 'diams' ? '♦' : suit === 'hearts' ? '♥' : suit === 'spades' ? '♠' : suit === 'clubs' ? '♣' : 'Invalid suit'
+          }
+        </span>
       </span>
     </div>
   );
